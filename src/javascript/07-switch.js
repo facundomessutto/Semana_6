@@ -18,7 +18,38 @@ switch(menu){
         imprime="Opcion no definida";
 }
 console.log(imprime);
-    
+console.log("-------------------------");
+//definimos una variable
+var dia = "sabado";
+
+//Definimos el Switch con una variable de texto
+switch(dia) {
+    case "lunes":
+        imprime2 = ("Este es el dia: "+ dia);
+        break;
+    case "martes":
+        imprime2 = ("Este es el dia: "+ dia);
+        break;
+    case "miercoles":
+        imprime2 = ("Este es el dia: "+ dia);
+        break;
+    case "jueves":
+        imprime2 = ("Este es el dia: "+ dia);
+        break;
+    case "viernes":
+        imprime2 = ("Este es el dia: "+ dia);
+        break;
+    case "sabado":
+        imprime2 = ("Este es el dia finde: "+ dia);
+        break;
+    case "domingo":
+        imprime2 = ("Este es el dia finde: "+ dia);
+        break;
+    default:
+        imprime2= "Dia no valido";
+        break;
+}
+console.log(imprime2);
 
 
 
