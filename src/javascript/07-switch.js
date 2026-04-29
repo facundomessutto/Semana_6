@@ -51,6 +51,44 @@ switch(dia) {
 }
 console.log(imprime2);
 
+console.log("-------------------------------------");
+
+//Definimos una variable
+var edad = 13;
+
+//Definimos las variables con condiciones
+var esNino = edad < 13;
+var esAdolescente = edad >= 13 && edad < 18;
+var esAdulto = edad >= 18 && edad < 65;
+var esAdultoMayor = edad >= 65;
+
+//Preguntamos que tipo de valor estaremos trabajando
+console.log(typeof (esNino));
+
+//Realizamos el switch con valor != a numerico
+switch (true) {
+    case esNino:
+        parametros = "Eres un niño";
+        break;
+    case esAdolescente:
+        parametros = "Eres adolescente";
+        break;
+    case esAdulto:
+        parametros = "Eres adulto";
+        break;
+    case esAdultoMayor:
+        parametros = "Eres adulto mayor";
+        break;
+    default:
+        parametros = "Edad no válida";
+        break;
+}
+
+console.log(parametros);
+
+
+console.log("-------------------------------------");
+
 
 
 
