@@ -1,12 +1,13 @@
 
 // La función principal: Ella tiene el mensaje, pero no sabe qué hacer con él.
-function obtenerMensaje(callback) {
+function obtenerMensaje(callba) {
     const texto = "¡Clase de JS terminada!";
-    callback(texto); // Le pasa el texto a la función que tú le envíes
+    callba(texto); // Le pasa el texto a la función que tú le envíes
 }
 
 // Opción A: Solo imprimirlo
 obtenerMensaje((m) => console.log(m));
+
 
 // Opción B: Alertarlo (aparece una ventana en el navegador)
 obtenerMensaje((m) => alert(m));

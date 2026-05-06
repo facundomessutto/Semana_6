@@ -26,7 +26,12 @@ console.log("Sistema versión: " + obtenerVersion());
 
 console.log("---------------------------");
 //Creacion de un objeto dentro de un arrow function
-const crearUsuario = (id, nombre) => ({ id: id, nombre: nombre });
+const crearUsuario = (id, nombre) => 
+    (
+        { id: id, nombre: nombre 
+
+        }
+    );
 const user1 = crearUsuario(1, "Daniel");
 console.log(user1);
 
@@ -45,9 +50,10 @@ console.log(listaUsuarios);
 console.log("---------------------------");
 
 //Creamos el Array de precios
-const precios = [100, 200, 300, 400];
-// Aplicar un descuento del 10% a todos los precios en una arrowfunction, (MAp Es para recorrer un array)
-const preciosConDescuento = precios.map(p => p * 0.9);
+const precios = [10, 20, 30, 40];
+// Aplicar un descuento del 10% a todos los precios en una arrowfunction, 
+// (MAp Es para recorrer un array)
+const preciosConDescuento = precios.map(p => p * 0.5);
 
 // [90, 180, 270, 360]
 console.log(preciosConDescuento);
@@ -60,9 +66,15 @@ const superHeroes = ["Omniman", "Invensible", "AtomEve", "The Inmortal"];
 
 // .map recorre el array y por cada nombre crea un objeto
 // El segundo parámetro de map (i) es el índice (0, 1, 2...)
-const superHeroesProcesados = superHeroes.map((nom, i) => ({ 
-    id: i + 1, 
-    nombre: nom 
-}));
+const superHeroesProcesados = superHeroes.map((nom, i) => 
+    //Recordar que cada objeto debe estar en un paretesis
+    (
+        { 
+   
+            id: i + 1, 
+            nombre: nom 
+        }
+    )
+);
 
 console.table(superHeroesProcesados);
