@@ -181,7 +181,7 @@ ValidarDato(15, (n)=> n < 10);
 ValidarDato(5, (n)=> n < 10);
 */
 
-
+/*
 //funcion principal: recibe un texto y una funcion que lo modifica
 function TransformarTexto(texto, callback){
     return callback(texto);
@@ -197,9 +197,59 @@ const exclamacion = TransformarTexto("hola mundo", (t) => "¡¡"+ t + "!!");
 const mayusExclamacion = TransformarTexto("hola mundo", (t) => "¡¡"+ t.toUpperCase() + "!!");
 
 
-console.log(mayus);
-console.log(exclamacion);
-console.log(mayusExclamacion);
+console.log(mayus); //HOLA MUNDO
+console.log(exclamacion); //¡¡hola mundo!!
+console.log(mayusExclamacion); //¡¡HOLA MUNDO!!
+
+*/
+
+/*
+function repetirAccion(veces, callback){
+    for (let i = 1; i <= veces; i++){
+    callback(i);
+    }
+}
+
+repetirAccion(3,(num)=>{
+    console.log("Ejecucion numero: " + num);
+})
+
+function repetirWea(v,){
+
+}
+
+*/
+console.log("---------------------------");
+
+
+//Simulacion simple de proceso (mas realista)
+//funcion principal: simula un proceso de compra
+function procesarCompra(producto, callback){
+    console.log("Procesando compra de: " + producto);
+//aqui se ejecuta lo que queremos hacer despues
+    callback(producto);
+}
+//callback 1: mostrar mensaje de texto
+procesarCompra("Notebook", (p) => {
+    console.log("Compra realizada con exito de: " + p);
+})
+
+console.log("-------------------");
+//callback 2: generar boleta
+
+procesarCompra("Notebook", (p) => {
+    console.log("Genarando boleta para: " + p);
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
