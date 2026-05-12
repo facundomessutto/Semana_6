@@ -221,7 +221,7 @@ function repetirWea(v,){
 */
 console.log("---------------------------");
 
-
+/*
 //Simulacion simple de proceso (mas realista)
 //funcion principal: simula un proceso de compra
 function procesarCompra(producto, callback){
@@ -241,13 +241,47 @@ procesarCompra("Notebook", (p) => {
     console.log("Genarando boleta para: " + p);
 })
 
+*/
 
 
+//Procesador  con multiples callbacks ()
+//Funcion principal: recibe una lista y 3 callbacks
+function procesarDatos(lista, filtro, transformador, accionFinal){
+    let resultado = [];
+
+    for (let elemento of lista){
+        //1. Primero decidimos si el elemento pasa el filtro
+        if(filtro(elemento)){
+            //2. Luego, transformamos al elemento
+            let transformado = transformador(elemento);
+            //3. Guardamos el resultado
+            resultado.push(transformado);
+        }
+    }
+    //4. Finalmente ejecutamos una accion con todos los resultados
+    accionFinal(resultado);
+};
 
 
+//lista de numeros
+const numeros = [1,2,3,4,5,6];
+//EJECUCION aqui esta compelto
+//Estamos pasando 3 callbacks distintos al mismo tiempo
+ProcesarDatos(
+    numeros,
+    //callback 1: FILTRO (solo numneros pares)
+    (n) => n %2 === 0,
 
-
-
+    //callback2: ACCION (muestra por 10)
+    (n) => n*10,
+    //callback3: ACCION FINAL (mostrar resultados)
+    (resultado) => {
+        console.log("Resultado dinal:");
+        for (let r of resultado) {
+            console.log(r);
+        }
+    }
+)
 
 
 
