@@ -274,7 +274,7 @@ ProcesarDatos(
 
     //callback2: ACCION (muestra por 10)
     (n) => n*10,
-    //callback3: ACCION FINAL (mostrar resultados)
+    //callback3: ACCION FINAL (mostrar resultados )
     (resultado) => {
         console.log("Resultado dinal:");
         for (let r of resultado) {

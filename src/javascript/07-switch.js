@@ -20,8 +20,11 @@ switch(menu){
 console.log(imprime);
 console.log("-------------------------");
 //definimos una variable
-var dia = "sabado";
-
+var dia = "lunes";
+//la exclamacion indica que es distinto de false (true)
+if(!false){
+    dia = "domingo"
+}
 //Definimos el Switch con una variable de texto
 switch(dia) {
     case "lunes":
